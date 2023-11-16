@@ -17,6 +17,7 @@ import ComicsList from "./assets/pages/ComicsList";
 import CharactersList from "./assets/pages/CharactersList";
 // import SingleCharacter from "./assets/pages/SingleCharacter";
 // import Favoris from "./assets/pages/Favoris";
+import NotFound from "./assets/pages/NotFound";
 
 // IMAGES
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
@@ -29,7 +30,10 @@ function App() {
     <Router>
       <Header search={search} setSearch={setSearch} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home search={search} setSearch={setSearch} />}
+        />
         <Route
           path="/comics"
           element={<ComicsList search={search} setSearch={setSearch} />}
@@ -38,7 +42,9 @@ function App() {
           path="/characters"
           element={<CharactersList search={search} setSearch={setSearch} />}
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
+
       <Footer />
     </Router>
   );
