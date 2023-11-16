@@ -29,7 +29,7 @@
 
   color-scheme: light dark;
   color: var(--primary-text-color);
-  background-color: #191d32;
+  background-color: var(--third-main-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -62,16 +62,12 @@ body {
   padding: 0 5rem;
 }
 
-/* .flex-parent {
+.display-column {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1 rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-.flex-item {
-  flex: calc(20% - 1rem);
-  height: 4rem;
-} */
 
 a {
   cursor: pointer;
@@ -88,7 +84,7 @@ h1 {
   font-family: var(--marvel-font);
   font-size: 3.2em;
   /* font-weight: 700; */
-  margin: 1rem;
+  margin: 2.7rem 1rem 1rem 1rem;
 }
 
 p {
@@ -132,6 +128,7 @@ input {
 /*! HEADER */
 header {
   /* border: 1px solid red; */
+  background-color: ;
   height: var(--header-height);
   display: flex;
   align-items: center;
@@ -140,6 +137,7 @@ header {
   width: 100vw;
   z-index: 1;
   position: fixed;
+  background-color: var(--third-main-color);
   /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
@@ -184,7 +182,7 @@ header {
 .primary-btn-link:hover {
   background-color: #9a031e;
   color: var(--marvel-yellow);
-  border: 2px solid var(--marvel-yellow);
+  /* border: 2px solid var(--marvel-yellow); */
 }
 
 .secondary-btn-link {
@@ -210,7 +208,7 @@ header {
 .secondary-btn-link:hover {
   background-color: #9a031e;
   color: var(--marvel-yellow);
-  border: 2px solid var(--marvel-yellow);
+  /* border: 2px solid var(--marvel-yellow); */
 }
 
 /*! SEARCH BAR CSS */
@@ -247,6 +245,50 @@ main {
   margin-top: 7rem;
 }
 
+/*! HOME PAGE CSS */
+.heroImg {
+  height: 40rem;
+}
+
+/*! PAGE LIST CSS  */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem;
+}
+
+.comics-card {
+  flex: calc(20% - 2rem);
+  height: 24rem;
+  border: 2px solid var(--marvel-yellow);
+
+  transition: all 0.2s;
+}
+
+.characters-card {
+  flex: calc(30% - 2rem);
+  /* height: 17rem; */
+  border: 2px solid var(--marvel-yellow);
+
+  transition: all 0.2s;
+}
+
+.top-card {
+  height: 80%;
+}
+
+.bottom-card {
+  height: 20%;
+}
+
+.card-img {
+  height: 13rem;
+  width: 10rem;
+
+  /* object-fit: cover; */
+}
+
 /*! FOOTER CSS */
 footer {
   /* border: 1px solid green; */
@@ -273,13 +315,6 @@ footer img {
 /*  PAGE NOT FOUND CSS */
 .NOTFOUND-img {
   height: 27rem;
-}
-
-.display-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .primary-links {

@@ -25,7 +25,7 @@ const Header = ({ search, setSearch }) => {
       </div>
       <div>
         {" "}
-        <Link className="secondary-btn-link" to="/comics">
+        <Link className="secondary-btn-link" to="/favorites">
           Favoris
         </Link>
       </div>
