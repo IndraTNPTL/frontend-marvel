@@ -14,6 +14,7 @@ const CharactersList = ({ search }) => {
         );
         setData(response.data.data);
         setIsLoading(false);
+        console.log(response.data.data);
       } catch (error) {
         console.log(error);
       }
@@ -36,26 +37,22 @@ const CharactersList = ({ search }) => {
           {data.results.map((character) => {
             return (
               <Link
-                to={`/character/${character._id}/comics`}
+                to={`/character/${character._id}`}
                 key={character._id}
                 className="characters-card"
               >
                 <article>
-                  <div className="top-card">
-                    <img
-                      className="card-img"
-                      src={
-                        character.thumbnail.path +
-                        "." +
-                        character.thumbnail.extension
-                      }
-                      alt={character.name}
-                    />
-                  </div>
-                  <div className="bottom-card">
-                    <h2>{character.name}</h2>
-                    <p>{character.description}</p>
-                  </div>
+                  <img
+                    className="card-img"
+                    src={
+                      character.thumbnail.path +
+                      "." +
+                      character.thumbnail.extension
+                    }
+                    alt={character.name}
+                  />
+
+                  <h2>{character.name}</h2>
                 </article>
               </Link>
             );

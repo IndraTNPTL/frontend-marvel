@@ -44,7 +44,14 @@ const CharacterComics = () => {
     <main className="container">
       <div className="display-column">
         <h1>{character.name}'s Comics</h1>
+        <img
+          className="card-img"
+          src={character.thumbnail.path + "." + character.thumbnail.extension}
+          alt={character.name}
+        />
+        <p>{character.description}</p>
         <div className="cards-container">
+          <h1>Il apparait dans...</h1>
           {comics.map((comic) => (
             <div key={comic._id} className="comics-card">
               <article>

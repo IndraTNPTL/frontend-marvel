@@ -40,7 +40,9 @@
 
 * {
   box-sizing: border-box;
+  cursor: url("./assets/imgs/pointer.png"), auto;
 }
+
 body {
   margin: 0;
   display: flex;
@@ -76,9 +78,9 @@ a {
   transition-duration: 0.3s;
 }
 
-a:hover {
+/* a:hover {
   color: var(--marvel-green);
-}
+} */
 
 h1 {
   font-family: var(--marvel-font);
@@ -128,7 +130,7 @@ input {
 /*! HEADER */
 header {
   /* border: 1px solid red; */
-  background-color: ;
+  background-color: var(--third-main-color);
   height: var(--header-height);
   display: flex;
   align-items: center;
@@ -247,7 +249,7 @@ main {
 
 /*! HOME PAGE CSS */
 .heroImg {
-  height: 40rem;
+  height: 35rem;
 }
 
 /*! PAGE LIST CSS  */
@@ -261,31 +263,39 @@ main {
 .comics-card {
   flex: calc(20% - 2rem);
   height: 24rem;
-  border: 2px solid var(--marvel-yellow);
+  /* border: 2px solid var(--marvel-yellow); */
 
-  transition: all 0.2s;
+  /* transition: all 0.2s; */
 }
 
 .characters-card {
-  flex: calc(30% - 2rem);
+  flex: calc(20% - 2rem);
   /* height: 17rem; */
-  border: 2px solid var(--marvel-yellow);
+  /* border: 2px solid var(--marvel-yellow);
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%; */
 
-  transition: all 0.2s;
+  /* transition: all 0.2s; */
 }
 
-.top-card {
-  height: 80%;
+.characters-card:nth-child(even) {
+  border-width: 3px 3px 5px 5px;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
 }
 
-.bottom-card {
-  height: 20%;
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-img {
   height: 13rem;
   width: 10rem;
 
+  border-width: 3px 3px 5px 5px;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
   /* object-fit: cover; */
 }
 
@@ -319,4 +329,23 @@ footer img {
 
 .primary-links {
   font-size: 1.4rem;
+}
+
+.btn-comic {
+  cursor: pointer;
+  transform: rotate(7deg);
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+  float: right;
+  background: var(--marvel-red);
+  /* border: 1px solid black; */
+  box-shadow: 4px 4px 0 var(--marvel-yellow);
+  transition: 0.4s;
+}
+
+.btn-comic:hover {
+  transform: none;
+  color: var(--marvel-yellow);
+  /* border: 1px solid black; */
 }
