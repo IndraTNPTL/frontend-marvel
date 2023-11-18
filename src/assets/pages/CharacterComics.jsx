@@ -65,7 +65,7 @@ const CharacterComics = () => {
               )}
             </div>
           </div>
-          {comics.comic ? (
+          {comics ? (
             <>
               <h1>See {character.name} in...</h1>
               <div className="cards-container">

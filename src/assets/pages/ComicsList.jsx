@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Comics = ({ search }) => {
+const Comics = ({ search, handleAddToFavorite }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,7 +56,7 @@ const Comics = ({ search }) => {
             Previous
           </button>
           <span className="page-nbr">
-            page {page} on {totalPages}
+            {page} on {totalPages}
           </span>
           <button
             className="secondary-btn-link"
@@ -70,12 +72,11 @@ const Comics = ({ search }) => {
         <div className="cards-container">
           {data.results.map((comic) => {
             return (
-              <Link
-                to={`/comic/${comic._id}`}
+              <article
                 className="comics-card styled-card-comics"
                 key={comic._id}
               >
-                <article>
+                <Link to={`/comic/${comic._id}`}>
                   <div className="top-card">
                     <img
                       className="img-comics"
@@ -88,8 +89,22 @@ const Comics = ({ search }) => {
                   <div className="bottom-card">
                     <h2>{comic.title}</h2>
                   </div>
-                </article>
-              </Link>
+                </Link>
+                <button
+                  onClick={() => {
+                    navigate(`/comic/${comic._id}`);
+                  }}
+                  className="btn-add-to-favorites primary-btn-link"
+                >
+                  Click for more infos
+                </button>
+                <button
+                  className="btn-add-to-favorites third-btn-link"
+                  onClick={() => handleAddToFavorite(comic)}
+                >
+                  Add to favorites
+                </button>
+              </article>
             );
           })}
         </div>
@@ -105,7 +120,7 @@ const Comics = ({ search }) => {
             Previous
           </button>
           <span className="page-nbr">
-            page {page} on {totalPages}
+            {page} on {totalPages}
           </span>
           <button
             className="secondary-btn-link"

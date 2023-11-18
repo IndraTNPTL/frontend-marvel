@@ -101,11 +101,14 @@ button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 1.2em;
+  max-height: 3rem;
   /* font-weight: 500; */
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  letter-spacing: 1.4px;
+  font-family: var(--marvel-font);
 }
 
 /* button:hover {
@@ -114,7 +117,7 @@ button {
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: none;
 }
 
 input {
@@ -179,7 +182,7 @@ header {
 
   font-weight: 700;
   height: 2.5rem;
-  width: 9rem;
+  min-width: 9rem;
   transition: all 0.4s ease-in-out;
 }
 
@@ -205,7 +208,7 @@ header {
 
   font-weight: 700;
   height: 2.5rem;
-  width: 7rem;
+  min-width: 7rem;
   transition: all 0.4s ease-in-out;
 }
 
@@ -318,6 +321,7 @@ main {
   box-shadow: 7px 7px 0 var(--marvel-yellow);
   transition: 0.4s;
   transform: rotate(7deg);
+  max-width: 20rem;
 }
 
 .styled-card-comics:hover {
@@ -338,8 +342,8 @@ main {
 
 .img-comics {
   cursor: pointer;
-  width: 14rem;
-  height: 20rem;
+  width: 12rem;
+  height: 18rem;
   object-fit: fill;
   background: var(--marvel-red);
   border: 2px solid var(--third-main-color);
@@ -408,8 +412,12 @@ main {
   justify-content: center;
   text-align: center;
   cursor: pointer;
-  padding: 1rem 0;
+  padding: 1.7rem 0 1rem 0;
   font-size: 2rem;
+}
+
+.bottom-card h2 {
+  font-size: 1.5rem;
 }
 
 article {
@@ -536,7 +544,12 @@ footer img {
   align-items: center;
   gap: 2rem;
   margin: 2rem;
+  width: 27%;
 }
+
+/* .pagination-btns-container * {
+  flex: 1;
+} */
 
 button:disabled {
   background-color: lightgrey;
@@ -544,4 +557,9 @@ button:disabled {
   border-color: grey;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+/*! FAVORITE PAGE CSS */
+.btn-add-to-favorites {
+  font-size: 1rem;
 }

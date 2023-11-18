@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const CharactersList = ({ search }) => {
+const CharactersList = ({ search, handleAddToFavorite }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,7 +55,7 @@ const CharactersList = ({ search }) => {
             Previous
           </button>
           <span className="page-nbr">
-            page {page} on {totalPages}
+            {page} on {totalPages}
           </span>
           <button
             className="primary-btn-link"
@@ -69,26 +71,41 @@ const CharactersList = ({ search }) => {
         <div className="cards-container">
           {data.results.map((character) => {
             return (
-              <Link
-                to={`/character/${character._id}`}
+              <article
                 key={character._id}
                 className="characters-card styled-card-characters"
               >
-                <article>
-                  <img
-                    className="img-characters"
-                    src={
-                      character.thumbnail.path +
-                      "." +
-                      character.thumbnail.extension
-                    }
-                    alt={character.name}
-                  />
+                <Link to={`/character/${character._id}`}>
+                  <div className="top-card">
+                    <img
+                      className="img-characters"
+                      src={
+                        character.thumbnail.path +
+                        "." +
+                        character.thumbnail.extension
+                      }
+                      alt={character.name}
+                    />
+                  </div>
                   <div className="bottom-card">
                     <h2>{character.name}</h2>
                   </div>
-                </article>
-              </Link>
+                </Link>
+                <button
+                  onClick={() => {
+                    navigate(`/character/${character._id}`);
+                  }}
+                  className="btn-add-to-favorites secondary-btn-link"
+                >
+                  Click for more infos
+                </button>
+                <button
+                  className="btn-add-to-favorites third-btn-link"
+                  onClick={() => handleAddToFavorite(character)}
+                >
+                  Add to favorites
+                </button>
+              </article>
             );
           })}
         </div>
@@ -104,7 +121,7 @@ const CharactersList = ({ search }) => {
             Previous
           </button>
           <span className="page-nbr">
-            page {page} on {totalPages}
+            {page} on {totalPages}
           </span>
           <button
             className="primary-btn-link"
