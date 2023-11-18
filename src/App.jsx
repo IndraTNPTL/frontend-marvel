@@ -45,6 +45,14 @@ function App() {
     alert("Added to favorites ❤️");
   }
 
+  const handleAddToFavoriteWithType = (item) => {
+    const itemWithType = {
+      ...item,
+      type: "character",
+    };
+    handleAddToFavorite(itemWithType);
+  };
+
   return (
     <Router>
       <Header search={search} setSearch={setSearch} setPage={setPage} />
@@ -60,7 +68,10 @@ function App() {
             />
           }
         />
-        <Route path="/comic/:id" element={<SingleComic />} />
+        <Route
+          path="/comic/:id"
+          element={<SingleComic handleAddToFavorite={handleAddToFavorite} />}
+        />
         <Route
           path="/characters"
           element={
@@ -70,8 +81,21 @@ function App() {
             />
           }
         />
-        <Route path="/character/:id" element={<CharacterComics />} />
-        <Route path="/favorites" element={<Favoris />} />
+        <Route
+          path="/character/:id"
+          element={
+            <CharacterComics handleAddToFavorite={handleAddToFavorite} />
+          }
+        />
+        <Route
+          path="/favorites"
+          element={
+            <Favoris
+              favoriteItem={favoriteItem}
+              setFavoriteItem={setFavoriteItem}
+            />
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

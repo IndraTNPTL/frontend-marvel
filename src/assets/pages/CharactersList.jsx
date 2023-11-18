@@ -33,6 +33,14 @@ const CharactersList = ({ search, handleAddToFavorite }) => {
     setTotalPages(Math.ceil(totalItems / 100));
   }, [totalItems]);
 
+  const handleAddToFavoriteWithType = (item) => {
+    const itemWithType = {
+      ...item,
+      type: "character",
+    };
+    handleAddToFavorite(itemWithType);
+  };
+
   return isLoading ? (
     <main className="container">
       <div className="display-column">
@@ -101,7 +109,7 @@ const CharactersList = ({ search, handleAddToFavorite }) => {
                 </button>
                 <button
                   className="btn-add-to-favorites third-btn-link"
-                  onClick={() => handleAddToFavorite(character)}
+                  onClick={() => handleAddToFavoriteWithType(character)}
                 >
                   Add to favorites
                 </button>

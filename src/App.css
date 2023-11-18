@@ -71,6 +71,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 a {
@@ -453,6 +454,10 @@ article {
   flex: 2;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
 }
 
 .single-section-middle {
@@ -544,7 +549,7 @@ footer img {
   align-items: center;
   gap: 2rem;
   margin: 2rem;
-  width: 27%;
+  width: 30%;
 }
 
 /* .pagination-btns-container * {
@@ -559,7 +564,99 @@ button:disabled {
   pointer-events: none;
 }
 
+.page-nbr {
+  font-size: 1.4rem;
+}
+
 /*! FAVORITE PAGE CSS */
 .btn-add-to-favorites {
   font-size: 1rem;
+}
+
+.styled-card-favorites {
+  cursor: pointer;
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+  padding: 1rem 1.4rem;
+  float: right;
+  background: var(--marvel-second-indigo);
+  border: 2px solid var(--third-main-color);
+  box-shadow: 7px 7px 0 var(--marvel-yellow);
+  /* transition: 0.4s; */
+  /* transform: rotate(7deg); */
+  max-width: 20rem;
+}
+
+#btn-delete {
+  display: flex;
+  max-height: 8rem;
+  background-color: transparent;
+  padding: 0.2rem;
+  border: none;
+  transition: 0.7s;
+}
+
+#btn-delete:hover {
+  transform: rotate(-17deg);
+}
+
+.remove-img {
+  height: 5rem;
+}
+
+/* Hide the tooltip by default */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show the tooltip when hovering over the button */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn-empty {
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.7rem;
+
+  background: var(--marvel-second-indigo);
+  border: 2px solid var(--third-main-color);
+  box-shadow: 7px 7px 0 var(--marvel-yellow);
+  transition: 0.4s;
+  transform: rotate(7deg);
+  max-width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-empty:hover {
+  transform: none;
+}
+
+.favorites-empty-img {
+  margin: 2rem 0 0 0;
+  height: 27rem;
+}
+
+.empty-favorite {
+  font-size: 1.7rem;
 }

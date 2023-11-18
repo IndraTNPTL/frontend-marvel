@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const CharacterComics = () => {
+const CharacterComics = ({ handleAddToFavorite }) => {
   const [character, setCharacter] = useState();
   const [comics, setComics] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const params = useParams();
   const id = params.id;
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,6 +35,14 @@ const CharacterComics = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [id]);
 
+  const handleAddToFavoriteWithType = (item) => {
+    const itemWithType = {
+      ...item,
+      type: "character",
+    };
+    handleAddToFavorite(itemWithType);
+  };
+
   return isLoading ? (
     <main className="container">
       <div className="display-column">
@@ -47,6 +56,12 @@ const CharacterComics = () => {
           <div className="single-character-container">
             <div className="single-section-left">
               <h1 className="single-section-h1">{character.name}</h1>
+              <button
+                className="btn-add-to-favorites third-btn-link"
+                onClick={() => handleAddToFavoriteWithType(character)}
+              >
+                Add to favorites
+              </button>
             </div>
             <div className="single-section-middle">
               <img
@@ -70,30 +85,50 @@ const CharacterComics = () => {
               <h1>See {character.name} in...</h1>
               <div className="cards-container">
                 {comics.map((comic) => (
-                  <Link
-                    to={`/comic/${comic._id}`}
-                    key={comic._id}
+                  <article
                     className="comics-card styled-card-comics"
+                    key={comic._id}
                   >
-                    <div>
-                      <article>
-                        <div className="top-card">
-                          <img
-                            className="img-comics"
-                            src={
-                              comic.thumbnail.path +
-                              "." +
-                              comic.thumbnail.extension
-                            }
-                            alt={comic.title}
-                          />
-                        </div>
-                        <div className="bottom-card">
-                          <h2>{comic.title}</h2>
-                        </div>
-                      </article>
-                    </div>
-                  </Link>
+                    <Link to={`/comic/${comic._id}`}>
+                      <div className="top-card">
+                        <img
+                          className="img-comics"
+                          src={
+                            comic.thumbnail.path +
+                            "." +
+                            comic.thumbnail.extension
+                          }
+                          alt={comic.title}
+                        />
+                      </div>
+                      <div className="bottom-card">
+                        <h2>{comic.title}</h2>
+                      </div>
+                    </Link>
+                    <button
+                      onClick={() => {
+                        navigate(`/comic/${comic._id}`);
+                      }}
+                      className="btn-add-to-favorites primary-btn-link"
+                    >
+                      Click for more infos
+                    </button>
+                    <button
+                      className="btn-add-to-favorites third-btn-link"
+                      onClick={() => {
+                        const handleAddToFavoriteWithType = (item) => {
+                          const itemWithType = {
+                            ...item,
+                            type: "comic",
+                          };
+                          handleAddToFavorite(itemWithType);
+                        };
+                        handleAddToFavoriteWithType(comic);
+                      }}
+                    >
+                      Add to favorites
+                    </button>
+                  </article>
                 ))}
               </div>
             </>

@@ -34,6 +34,14 @@ const Comics = ({ search, handleAddToFavorite }) => {
     setTotalPages(Math.ceil(totalItems / 100));
   }, [totalItems]);
 
+  const handleAddToFavoriteWithType = (item) => {
+    const itemWithType = {
+      ...item,
+      type: "comic",
+    };
+    handleAddToFavorite(itemWithType);
+  };
+
   return isLoading ? (
     <main className="container">
       <div className="display-column">
@@ -100,7 +108,7 @@ const Comics = ({ search, handleAddToFavorite }) => {
                 </button>
                 <button
                   className="btn-add-to-favorites third-btn-link"
-                  onClick={() => handleAddToFavorite(comic)}
+                  onClick={() => handleAddToFavoriteWithType(comic)}
                 >
                   Add to favorites
                 </button>

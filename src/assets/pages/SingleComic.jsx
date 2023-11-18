@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-const SingleComic = () => {
+const SingleComic = ({ handleAddToFavorite }) => {
   const [comic, setComic] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,6 +26,14 @@ const SingleComic = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [id]);
 
+  const handleAddToFavoriteWithType = (item) => {
+    const itemWithType = {
+      ...item,
+      type: "comic",
+    };
+    handleAddToFavorite(itemWithType);
+  };
+
   return isLoading ? (
     <main className="container">
       <div className="display-column">
@@ -39,6 +47,12 @@ const SingleComic = () => {
           <div className=" single-comic-container">
             <div className="single-section-left">
               <h1 className="single-section-h1">{comic.title}</h1>
+              <button
+                className="btn-add-to-favorites third-btn-link"
+                onClick={() => handleAddToFavoriteWithType(comic)}
+              >
+                Add to favorites
+              </button>
             </div>
             <div className="single-section-middle">
               <img
