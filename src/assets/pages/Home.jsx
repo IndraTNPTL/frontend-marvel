@@ -5,9 +5,10 @@ const Home = () => {
   return (
     <main className="container">
       <div className="display-column">
-        <img className="heroImg" src={herobanner} alt="héros Marvel" />
-        <Link to="/comics">
-          <div className="btn-comic">Entrez!</div>
+        <Link to="/comics" className="home-link">
+          <img className="heroImg" src={herobanner} alt="héros Marvel" />
+
+          <div className="btn-comic">Enter!</div>
         </Link>
       </div>
     </main>

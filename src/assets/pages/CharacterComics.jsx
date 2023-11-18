@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
 const CharacterComics = () => {
@@ -43,31 +43,63 @@ const CharacterComics = () => {
   ) : (
     <main className="container">
       <div className="display-column">
-        <h1>{character.name}'s Comics</h1>
-        <img
-          className="card-img"
-          src={character.thumbnail.path + "." + character.thumbnail.extension}
-          alt={character.name}
-        />
-        <p>{character.description}</p>
         <div className="cards-container">
-          <h1>Il apparait dans...</h1>
-          {comics.map((comic) => (
-            <div key={comic._id} className="comics-card">
-              <article>
-                <div className="top-card">
-                  <img
-                    className="card-img"
-                    src={comic.thumbnail.path + "." + comic.thumbnail.extension}
-                    alt={comic.title}
-                  />
-                </div>
-                <div className="bottom-card">
-                  <h2>{comic.title}</h2>
-                </div>
-              </article>
+          <div className="single-character-container">
+            <div className="single-section-left">
+              <h1 className="single-section-h1">{character.name}</h1>
             </div>
-          ))}
+            <div className="single-section-middle">
+              <img
+                className="img-characters"
+                src={
+                  character.thumbnail.path + "." + character.thumbnail.extension
+                }
+                alt={character.name}
+              />
+            </div>
+            <div className="single-section-right">
+              {character.description ? (
+                <p>{character.description}</p>
+              ) : (
+                <p>{character.name} history coming soon...</p>
+              )}
+            </div>
+          </div>
+          {comics.comic ? (
+            <>
+              <h1>See {character.name} in...</h1>
+              <div className="cards-container">
+                {comics.map((comic) => (
+                  <Link
+                    to={`/comic/${comic._id}`}
+                    key={comic._id}
+                    className="comics-card styled-card-comics"
+                  >
+                    <div>
+                      <article>
+                        <div className="top-card">
+                          <img
+                            className="img-comics"
+                            src={
+                              comic.thumbnail.path +
+                              "." +
+                              comic.thumbnail.extension
+                            }
+                            alt={comic.title}
+                          />
+                        </div>
+                        <div className="bottom-card">
+                          <h2>{comic.title}</h2>
+                        </div>
+                      </article>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </>
+          ) : (
+            <div></div>
+          )}
         </div>
       </div>
     </main>

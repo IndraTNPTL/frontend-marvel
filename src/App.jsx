@@ -13,7 +13,7 @@ import Footer from "./assets/components/Footer";
 // PAGES
 import Home from "./assets/pages/Home";
 import ComicsList from "./assets/pages/ComicsList";
-// import SingleComic from "./assets/pages/SingleComic";
+import SingleComic from "./assets/pages/SingleComic";
 import CharactersList from "./assets/pages/CharactersList";
 import CharacterComics from "./assets/pages/CharacterComics";
 // import Favoris from "./assets/pages/Favoris";
@@ -25,17 +25,18 @@ library.add(faMagnifyingGlass);
 
 function App() {
   const [search, setSearch] = useState("");
+  const [page, setPage] = useState();
 
   return (
     <Router>
-      <Header search={search} setSearch={setSearch} />
+      <Header search={search} setSearch={setSearch} setPage={setPage} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
           path="/comics"
           element={<ComicsList search={search} setSearch={setSearch} />}
         />
-        {/* <Route path="/comic/:id" element={<SingleComic />} /> */}
+        <Route path="/comic/:id" element={<SingleComic />} />
         <Route
           path="/characters"
           element={<CharactersList search={search} setSearch={setSearch} />}

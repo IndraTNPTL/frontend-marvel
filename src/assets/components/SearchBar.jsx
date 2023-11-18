@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const SearchBar = ({ search, setSearch }) => {
+const SearchBar = ({ search, setSearch, setPage }) => {
   return (
     <div className="search-bar-container">
       <FontAwesomeIcon
@@ -11,10 +11,11 @@ const SearchBar = ({ search, setSearch }) => {
       <input
         type="text"
         className="search-input"
-        placeholder="Rechercher..."
+        placeholder="I'm searching for..."
         value={search}
         onChange={(event) => {
           setSearch(event.target.value);
+          setPage(1);
         }}
       />
     </div>

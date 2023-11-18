@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 
 import logo from "../imgs/marvelComicsLogo.png";
 
-const Header = ({ search, setSearch }) => {
+const Header = ({ search, setSearch, setPage }) => {
   return (
     <header className="container">
       <div>
@@ -13,20 +13,19 @@ const Header = ({ search, setSearch }) => {
         </Link>
       </div>
 
-      <SearchBar search={search} setSearch={setSearch} />
+      <SearchBar search={search} setSearch={setSearch} setPage={setPage} />
 
       <div className="header-links-container">
         <Link className="primary-btn-link" to="/characters">
-          Personnages
+          Characters
         </Link>
-        <Link className="primary-btn-link" to="/comics">
+        <Link className="secondary-btn-link" to="/comics">
           Comics
         </Link>
       </div>
       <div>
-        {" "}
-        <Link className="secondary-btn-link" to="/favorites">
-          Favoris
+        <Link className="third-btn-link" to="/favorites">
+          My Favorites
         </Link>
       </div>
     </header>
