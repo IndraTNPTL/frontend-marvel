@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 
-import SearchBar from "./SearchBar";
-
 import logo from "../imgs/marvelComicsLogo.png";
 
-const Header = ({ search, setSearch, setPage }) => {
+const Header = () => {
   return (
     <header className="container">
       <div>
@@ -12,8 +10,7 @@ const Header = ({ search, setSearch, setPage }) => {
           <img className="logo" src={logo} alt="logo" />
         </Link>
       </div>
-
-      <SearchBar search={search} setSearch={setSearch} setPage={setPage} />
+      {/* <SearchBar search={search} setSearch={setSearch} setPage={setPage} /> */}
 
       <div className="header-links-container">
         <Link className="primary-btn-link" to="/characters">

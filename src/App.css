@@ -43,6 +43,7 @@
 
 * {
   box-sizing: border-box;
+  transition: 0.4s;
 }
 
 body {
@@ -135,7 +136,6 @@ input {
 
 /*! HEADER */
 header {
-  /* border: 1px solid red; */
   background-color: var(--third-main-color);
   height: var(--header-height);
   display: flex;
@@ -164,7 +164,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .primary-btn-link {
@@ -252,22 +252,25 @@ header {
   border-radius: 5px;
   display: flex;
   align-items: center;
+  margin: 2rem 0 3rem 0;
+  width: 33rem;
 }
 
 .search-input {
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: var(--main-color);
-  height: 2.5rem;
+  height: 3.4rem;
   outline: none;
   padding-left: 1rem;
-  width: 20rem;
+  width: 30rem;
   /* flex: 3; */
 }
 
 .search-icon {
   margin-left: 1rem;
+  height: 1.4rem;
 }
 
 /*! MAIN CSS */
@@ -447,7 +450,7 @@ article {
 }
 
 .single-section-h1 {
-  font-size: 4.4rem;
+  font-size: 3rem;
 }
 
 .single-section-left {
@@ -468,7 +471,7 @@ article {
   flex: 2;
 }
 .single-section-right p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 1.2;
 }
 
@@ -659,4 +662,30 @@ button:disabled {
 
 .empty-favorite {
   font-size: 1.7rem;
+}
+
+@media (max-width: 480px) {
+  /*! GENERAL CSS */
+
+  .container {
+    padding: 2rem;
+  }
+
+  header {
+    flex: 1;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  footer {
+    flex: 1;
+  }
+
+  /* ! HOME CSS */
+
+  .heroImg {
+    height: 17rem;
+  }
 }

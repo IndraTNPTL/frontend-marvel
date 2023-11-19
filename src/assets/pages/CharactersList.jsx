@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-const CharactersList = ({ search, handleAddToFavorite }) => {
+import SearchBar from "../components/SearchBar";
+
+const CharactersList = ({ handleAddToFavorite }) => {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalItems, setTotalItems] = useState(0);
+  const [search, setSearch] = useState("");
 
   const navigate = useNavigate();
 
@@ -51,6 +54,7 @@ const CharactersList = ({ search, handleAddToFavorite }) => {
     <main className="container">
       <div className="display-column">
         <h1>Characters</h1>
+        <SearchBar search={search} setSearch={setSearch} setPage={setPage} />
         <div className="pagination-btns-container">
           <button
             className="primary-btn-link"

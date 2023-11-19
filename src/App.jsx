@@ -25,7 +25,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 library.add(faMagnifyingGlass);
 
 function App() {
-  const [search, setSearch] = useState("");
+  // const [search, setSearch] = useState("");
   const [page, setPage] = useState();
 
   const favoriteItems = JSON.parse(localStorage.getItem("favorite")) || [];
@@ -76,18 +76,12 @@ function App() {
     <>
       <Router>
         <Toaster />
-        <Header search={search} setSearch={setSearch} setPage={setPage} />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
             path="/comics"
-            element={
-              <ComicsList
-                search={search}
-                setSearch={setSearch}
-                handleAddToFavorite={handleAddToFavorite}
-              />
-            }
+            element={<ComicsList handleAddToFavorite={handleAddToFavorite} />}
           />
           <Route
             path="/comic/:id"
@@ -96,10 +90,7 @@ function App() {
           <Route
             path="/characters"
             element={
-              <CharactersList
-                search={search}
-                handleAddToFavorite={handleAddToFavorite}
-              />
+              <CharactersList handleAddToFavorite={handleAddToFavorite} />
             }
           />
           <Route

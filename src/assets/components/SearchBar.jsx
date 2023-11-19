@@ -4,7 +4,7 @@ const SearchBar = ({ search, setSearch, setPage }) => {
   return (
     <div className="search-bar-container">
       <FontAwesomeIcon
-        icon="fa-solid fa-magnifying-glass"
+        icon="fa-solid fa-magnifying-glass fa-xl"
         style={{ color: "#757575" }}
         className="search-icon"
       />
