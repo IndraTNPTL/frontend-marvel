@@ -26,7 +26,6 @@ library.add(faMagnifyingGlass);
 
 function App() {
   // const [search, setSearch] = useState("");
-  const [page, setPage] = useState();
 
   const favoriteItems = JSON.parse(localStorage.getItem("favorite")) || [];
   const [favoriteItem, setFavoriteItem] = useState(favoriteItems);
