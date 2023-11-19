@@ -1,10 +1,10 @@
 # Marvel Comics App 💥
 
-Hey Marvel enthusiasts! 👋 Welcome to the Marvel Comics App, a cool project brought to life by a junior fullstack developer during the super awesome Le Reacteur Fullstack Developer Bootcamp. This marvel-ous creation was whipped up in just 4 days, showcasing some serious skills learned from the incredible teaching team at the bootcamp!
+Hey Marvel enthusiasts! 👋🏽 Welcome to the Marvel Comics App, a cool project brought to life by a junior fullstack developer during the super awesome Le Reacteur Fullstack Developer Bootcamp. This marvel-ous creation was whipped up in just 4 days, showcasing some serious skills learned from the incredible teaching team at the bootcamp!
 
 🚀 **[Visit the Marvel Comics App](https://my-marvel-comics-app.netlify.app/)**
 
-## Marvel at the Marvels! 🦸‍♂️🦸‍♀️
+## Marvel at the Marvels! 🦸🏽‍♂️🦸🏽‍♀️
 
 Marvel Explorer is a dynamic web app designed to explore and discover information about characters and comics from the Marvel universe. While the codebase is still a work in progress, the project showcases key functionalities and features that make it an exciting Marvel-themed experience.
 
@@ -30,7 +30,7 @@ Marvel Explorer is a dynamic web app designed to explore and discover informatio
 
 - **Card**: Every card in the Page List contains the name or title, a picture, and two buttons—one to access detailed information and another to add the item to the Favorites Page.
 
-### Page Details 🕵️‍♂️
+### Page Details 🕵🏽‍♀️
 
 - **Character Chronicles**: Learn all about a character's name, picture, story (if available), and the list of comics they appear in.
 
@@ -44,7 +44,7 @@ Marvel Explorer is a dynamic web app designed to explore and discover informatio
 
 - **Details on Demand**: On the Favorites page, you can check out the details of your comics or characters.
 
-### Oops! 404 Page 🤷‍♂️
+### Oops! 404 Page 🤷🏽‍♀️
 
 In case you stumble on a non-existent route, we'll gracefully guide you back home.
 
@@ -90,7 +90,7 @@ To check out the Marvel Comics App locally, follow these simple steps:
 
 ## Backend Magic 💻
 
-Marvel Comics App won't be possible without its superhero backend! 🦸‍♂️
+Marvel Comics App won't be possible without its superhero backend! 🦸🏽‍♀️
 
 - **[Marvel Comics App Backend Repository](https://github.com/IndraTNPTL/backend-marvel)**
 
