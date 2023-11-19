@@ -1,6 +1,6 @@
 # Marvel Comics App 💥
 
-Hey Marvel enthusiasts! 👋🏽 Welcome to the Marvel Comics App, a cool project brought to life by a junior fullstack developer during the super awesome Le Reacteur Fullstack Developer Bootcamp. This marvel-ous creation was whipped up in just 4 days, showcasing some serious skills learned from the incredible teaching team at the bootcamp!
+Hey Marvel enthusiasts! 👋🏽 Welcome to the Marvel Comics App, a cool project brought to life during the super awesome Le Reacteur Fullstack Developer Bootcamp. This marvel-ous creation was whipped up in just 4 days, showcasing some serious skills learned from the incredible teaching team at the bootcamp!
 
 🚀 **[Visit the Marvel Comics App](https://my-marvel-comics-app.netlify.app/)**
 
@@ -46,15 +46,15 @@ Marvel Explorer is a dynamic web app designed to explore and discover informatio
 
 ### Oops! 404 Page 🤷🏽‍♀️
 
-In case you stumble on a non-existent route, we'll gracefully guide you back home.
+In case you stumble on a non-existent route, I'll gracefully guide you back home.
 
 ### Pop of Color Inspired by Marvel 🌈
 
-Our CSS is inspired by the vibrant colors of Marvel superheroes, making the app a visual delight.
+My CSS is inspired by the vibrant colors of Marvel superheroes, making the app a visual delight.
 
 ## What's Next? 🚀
 
-- **Flashy Speeds**: We're working on making the app faster than a speeding bullet.
+- **Flashy Speeds**: I am working on making the app faster than a speeding bullet.
 
 - **Lookin' Good Everywhere**: Soon, the app will look cool on any device you fancy.
 
@@ -96,7 +96,7 @@ Marvel Comics App won't be possible without its superhero backend! 🦸🏽‍�
 
 ## Project Toolbox 🧰
 
-Here's a sneak peek at the tools we used:
+Here's a sneak peek at the tools I used:
 
 ```json
 "dependencies": {
