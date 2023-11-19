@@ -6,7 +6,7 @@ Hey Marvel enthusiasts! 👋🏽 Welcome to the Marvel Comics App, a cool projec
 
 ## Marvel at the Marvels! 🦸🏽‍♂️🦸🏽‍♀️
 
-Marvel Explorer is a dynamic web app designed to explore and discover information about characters and comics from the Marvel universe. While the codebase is still a work in progress, the project showcases key functionalities and features that make it an exciting Marvel-themed experience.
+Marvel Comics App is a dynamic web app designed to explore and discover information about characters and comics from the Marvel universe. While the codebase is still a work in progress, the project showcases key functionalities and features that make it an exciting Marvel-themed experience.
 
 ## The Marvel Journey 🌟
 
