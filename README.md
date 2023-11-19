@@ -22,7 +22,7 @@ Marvel Comics App is a dynamic web app designed to explore and discover informat
 
 - **Homepage Awesomeness**: Land on the homepage, hit the "Enter" button, or just click on those hero images to get started.
 
-- **Double Trouble Page Lists**: There are two lists – one for characters and another for comics, fetching data from the Le Reacteur Marvel API (https://lereacteur-marvel-api.netlify.app/).
+- **Double Trouble Page Lists**: There are two lists – one for characters and another for comics, fetching data from the Le Reacteur Marvel API.
 
 - **Flip Through Pages**: Each Page List displays results 100 by 100 in alphabetical order. Users can navigate between pages using "Previous" and "Next" buttons, with appropriate disabling when at the first or last page.
 
