@@ -22,11 +22,14 @@ Marvel Comics App is a dynamic web app designed to explore and discover informat
 
 - **Homepage Awesomeness**: Land on the homepage, hit the "Enter" button, or just click on those hero images to get started.
  <img width="1000" alt="Homepage" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/d69b92c9-54bc-41c0-a191-0f2628de9e26">
+ 
 
 - **Double Trouble Page Lists**: There are two lists – one for characters and another for comics, fetching data from the Le Reacteur Marvel API.
  <img width="1000" alt="Page List" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/3b6e53ae-1fc6-4219-8559-28b420842c08">
+ 
   
  <img width="1000" alt="Page List" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/825aa937-0ee6-4a4a-b9eb-f26a4ccb64d2">
+ 
 
 - **Flip Through Pages**: Each Page List displays results 100 by 100 in alphabetical order. Users can navigate between pages using "Previous" and "Next" buttons, with appropriate disabling when at the first or last page.
 
