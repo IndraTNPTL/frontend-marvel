@@ -12,7 +12,7 @@ Marvel Comics App is a dynamic web app designed to explore and discover informat
 
 ### Cool Upgrades Coming Soon 🚀
 
-- **Faster than Quicksilver**: The app will soon be zippier than ever, with improved response speed.
+- **Faster**: The app will soon be zippier than ever, with improved response speed.
 
 - **Flexibility Across Devices**: Get ready for a snazzy responsive design, making it look good on any screen size.
 
@@ -20,33 +20,31 @@ Marvel Comics App is a dynamic web app designed to explore and discover informat
 
 ### Easy Peasy Navigation 🗺️
 
-- **Homepage Awesomeness**: Land on the homepage, hit the "Enter" button, or just click on those hero images to get started.
- <img width="800" alt="Homepage" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/d69b92c9-54bc-41c0-a191-0f2628de9e26">
- 
+- **Homepage**: Land on the homepage, hit the "Enter" button, or just click on those hero images to get started.
+  <img width="800" alt="Homepage" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/d69b92c9-54bc-41c0-a191-0f2628de9e26">
 
-- **Double Trouble Page Lists**: There are two lists – one for characters and another for comics, fetching data from the Le Reacteur Marvel API.
- <img width="800" alt="Page List" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/3b6e53ae-1fc6-4219-8559-28b420842c08">
- 
-  
+- **Page Lists**: There are two lists – one for characters and another for comics, fetching data from the Le Reacteur Marvel API.
+  <img width="800" alt="Page List" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/3b6e53ae-1fc6-4219-8559-28b420842c08">
+
  <img width="800" alt="Page List" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/825aa937-0ee6-4a4a-b9eb-f26a4ccb64d2">
- 
 
-- **Flip Through Pages**: Each Page List displays results 100 by 100 in alphabetical order. Users can navigate between pages using "Previous" and "Next" buttons, with appropriate disabling when at the first or last page.
 
-- **Search Like a Pro**: Find your favorite comics or characters using the Search Bar on each Page List.
+- **Flip Through Details**: Each Page List displays results 100 by 100 in alphabetical order. Users can navigate between pages using "Previous" and "Next" buttons, with appropriate disabling when at the first or last page.
+
+- **Search bar**: Find your favorite comics or characters using the Search Bar on each Page List.
 
 - **Card**: Every card in the Page List contains the name or title, a picture, and two buttons—one to access detailed information and another to add the item to the Favorites Page.
- <img width="800" alt="Cards" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/b8977b28-5f84-47b0-b8a0-34448c6e4d09">
- <img width="200" alt="Cards details" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/050a92b3-e194-40c0-a8b4-e54b39ac6d64">
+  <img width="800" alt="Cards" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/b8977b28-5f84-47b0-b8a0-34448c6e4d09">
+  <img width="200" alt="Cards details" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/050a92b3-e194-40c0-a8b4-e54b39ac6d64">
 
 ### Page Details 🕵🏽‍♀️
 
 - **Character Chronicles**: Learn all about a character's name, picture, story (if available), and the list of comics they appear in.
- <img width="800" alt="character details" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/c3ec3e83-6c15-4336-a7d9-b063c0f0aafe">
- <img width="800" alt="comics for characters" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/24cc9f91-986a-4f44-9de5-1c5a801ce515">
+  <img width="800" alt="character details" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/c3ec3e83-6c15-4336-a7d9-b063c0f0aafe">
+  <img width="800" alt="comics for characters" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/24cc9f91-986a-4f44-9de5-1c5a801ce515">
 
-- **Comic Capers**: For comics, get the title, picture, and a snappy synopsis if we got one.
- <img width="800" alt="comics details" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/0b86ab00-1b4f-47d2-839b-67eb61a1bcbc">
+- **Comic**: For comics, get the title, picture, and a snappy synopsis if we got one.
+  <img width="800" alt="comics details" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/0b86ab00-1b4f-47d2-839b-67eb61a1bcbc">
 
 ### Favorites Page Magic ✨
 
@@ -61,19 +59,17 @@ Marvel Comics App is a dynamic web app designed to explore and discover informat
 ### Oops! 404 Page 🤷🏽‍♀️
 
 In case you stumble on a non-existent route, I'll gracefully guide you back home.
- <img width="800" alt="404 page" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/0d55b26f-7cc1-400a-ac98-8d27ac7e39ab">
+<img width="800" alt="404 page" src="https://github.com/IndraTNPTL/frontend-marvel/assets/126521804/0d55b26f-7cc1-400a-ac98-8d27ac7e39ab">
 
 ### Pop of Color Inspired by Marvel 🌈
 
-My CSS is inspired by the vibrant colors of Marvel superheroes, making the app a visual delight.
+My CSS is inspired by the vibrant colors of Marvel superheroes..
 
 ## What's Next? 🚀
 
-- **Flashy Speeds**: I am working on making the app faster than a speeding bullet.
-
 - **Lookin' Good Everywhere**: Soon, the app will look cool on any device you fancy.
 
-- **Cookie Storage Surprise**: Get ready for a sprinkle of cookies to enhance your experience.
+- **Cookie Storage**: Get ready for a sprinkle of cookies to enhance your experience.
 
 ## Ready to Roll? 🚀
 
