@@ -11,7 +11,7 @@ const SearchBar = ({ search, setSearch, setPage }) => {
       <input
         type="text"
         className="search-input"
-        placeholder="I'm searching for..."
+        placeholder="I'm looking for..."
         value={search}
         onChange={(event) => {
           setSearch(event.target.value);

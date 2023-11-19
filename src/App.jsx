@@ -2,7 +2,8 @@ import "./App.css";
 
 // PACKAGES
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { useState } from "react";
 
@@ -35,72 +36,93 @@ function App() {
       (favoriteItem) => favoriteItem._id === item._id
     );
     if (existingItem) {
-      alert(`Already one of your favorites!`);
+      toast.error("Already Added", {
+        style: {
+          borderRadius: "4% 95% 6% 95%/95% 4% 92% 5%;",
+          border: "1px solid #ed1b24",
+          background: "#eaeaea",
+          color: "#191d32",
+          borderWidth: "3px 3px 5px 5px",
+          fontSize: "2rem",
+        },
+      });
       return;
     }
     setFavoriteItem((previousFavoriteItem) => [...previousFavoriteItem, item]);
     localStorage.setItem("favorite", JSON.stringify([...favoriteItem, item]));
 
-    // Display message in the UI that fades out after a few seconds
-    alert("Added to favorites ❤️");
+    // alert("Added to favorites ❤️");
+    toast.success("Added to favorites", {
+      style: {
+        borderRadius: "4% 95% 6% 95%/95% 4% 92% 5%;",
+        border: "1px solid #41cd78",
+        background: "#eaeaea",
+        color: "#191d32",
+        borderWidth: "3px 3px 5px 5px",
+        fontSize: "2rem",
+      },
+    });
   }
 
-  const handleAddToFavoriteWithType = (item) => {
-    const itemWithType = {
-      ...item,
-      type: "character",
-    };
-    handleAddToFavorite(itemWithType);
-  };
+  // const handleAddToFavoriteWithType = (item) => {
+  //   const itemWithType = {
+  //     ...item,
+  //     type: "character",
+  //   };
+  //   handleAddToFavorite(itemWithType);
+  // };
 
   return (
-    <Router>
-      <Header search={search} setSearch={setSearch} setPage={setPage} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/comics"
-          element={
-            <ComicsList
-              search={search}
-              setSearch={setSearch}
-              handleAddToFavorite={handleAddToFavorite}
-            />
-          }
-        />
-        <Route
-          path="/comic/:id"
-          element={<SingleComic handleAddToFavorite={handleAddToFavorite} />}
-        />
-        <Route
-          path="/characters"
-          element={
-            <CharactersList
-              search={search}
-              handleAddToFavorite={handleAddToFavorite}
-            />
-          }
-        />
-        <Route
-          path="/character/:id"
-          element={
-            <CharacterComics handleAddToFavorite={handleAddToFavorite} />
-          }
-        />
-        <Route
-          path="/favorites"
-          element={
-            <Favoris
-              favoriteItem={favoriteItem}
-              setFavoriteItem={setFavoriteItem}
-            />
-          }
-        />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+    <>
+      <Router>
+        <Toaster />
+        <Header search={search} setSearch={setSearch} setPage={setPage} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/comics"
+            element={
+              <ComicsList
+                search={search}
+                setSearch={setSearch}
+                handleAddToFavorite={handleAddToFavorite}
+              />
+            }
+          />
+          <Route
+            path="/comic/:id"
+            element={<SingleComic handleAddToFavorite={handleAddToFavorite} />}
+          />
+          <Route
+            path="/characters"
+            element={
+              <CharactersList
+                search={search}
+                handleAddToFavorite={handleAddToFavorite}
+              />
+            }
+          />
+          <Route
+            path="/character/:id"
+            element={
+              <CharacterComics handleAddToFavorite={handleAddToFavorite} />
+            }
+          />
+          <Route
+            path="/favorites"
+            element={
+              <Favoris
+                favoriteItem={favoriteItem}
+                setFavoriteItem={setFavoriteItem}
+              />
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
 
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
+    </>
   );
 }
 

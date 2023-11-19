@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 import thanosSnap from "../imgs/remove-btn.png";
 import thanosEmpty from "../imgs/Thanos-PNG-Photo.png";
@@ -18,11 +19,31 @@ const Favoris = ({ favoriteItem, setFavoriteItem }) => {
     const updatedFavoriteItem = favoriteItem.filter((item) => item._id !== id);
     setFavoriteItem(updatedFavoriteItem);
     localStorage.setItem("favorite", JSON.stringify(updatedFavoriteItem));
+    toast.success("🥹 Deleted!", {
+      style: {
+        borderRadius: "4% 95% 6% 95%/95% 4% 92% 5%;",
+        border: "1px solid #41cd78",
+        background: "#eaeaea",
+        color: "#191d32",
+        borderWidth: "3px 3px 5px 5px",
+        fontSize: "2rem",
+      },
+    });
   }
 
   function handleEmptyFavorite() {
     localStorage.removeItem("favorite");
     setFavoriteItem([]);
+    toast.success("🗑 All favorites deleted !", {
+      style: {
+        borderRadius: "4% 95% 6% 95%/95% 4% 92% 5%;",
+        border: "1px solid #41cd78",
+        background: "#eaeaea",
+        color: "#191d32",
+        borderWidth: "3px 3px 5px 5px",
+        fontSize: "1.7rem",
+      },
+    });
   }
 
   console.log(favoriteItem);
